@@ -28,9 +28,10 @@ class Conta:
             if self.limite < self.limiteInicial:
                 resto = self.limiteInicial - self.limite
                 if deposito >= resto:
-                    
+
                     deposito = deposito - resto
                     self.limite = self.limite + resto
+                    self.saldo += resto
                     self.saldo += deposito
                     print(f"DEPÓSITO REALIZADO COM SUCESSO!\n NOVO SALDO DISPONÍVEL: {self.saldo} LIMITE DISPONÍVEL: {self.limite}")
             else:
